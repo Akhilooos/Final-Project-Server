@@ -21,7 +21,6 @@ app.use(cors());
 
 app.use('/mentor', mentorroute);
 app.use('/project', projectroute);
-// app.use('/project/topic', topicroute);
 app.use("/submit", submissionroute);
 
 app.use((err, req, res, next) => {

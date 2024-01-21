@@ -1,7 +1,6 @@
 // models/project.js
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const Subtopic = require('./topicmodel');
 
 const projectSchema = new Schema({
   projectId: {
@@ -13,7 +12,6 @@ const projectSchema = new Schema({
     type: String,
     required: true,
   },
-  subtopics: [Subtopic],
 });
 
 projectSchema.virtual('mentors', {
