@@ -4,7 +4,8 @@ const morgan = require('morgan');
 const mentorroute = require('./routes/mentorroutes');
 const projectroute = require('./routes/projectroutes');
 const submissionroute = require('./routes/submissionroutes');
-// const topicroute = require('./routes/topicroutes');
+const loginroute = require('./routes/loginroutes');
+
 
 const path = require('path');
 const cors = require('cors');
@@ -22,6 +23,7 @@ app.use(cors());
 app.use('/mentor', mentorroute);
 app.use('/project', projectroute);
 app.use("/submit", submissionroute);
+app.use('/auth', loginroute);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
