@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.77853830.css",
+    "main.js": "/static/js/main.b9f8ef9a.js",
+    "static/js/787.8aee7f79.chunk.js": "/static/js/787.8aee7f79.chunk.js",
+    "static/media/upskill.png": "/static/media/upskill.f1aa2ebe9003698b35ad.png",
+    "static/media/transparent-road-arrows-upside-down-cup-gold-arrows-point-up-to-gold-cup-upside-down654c8514c1c4a8.png": "/static/media/transparent-road-arrows-upside-down-cup-gold-arrows-point-up-to-gold-cup-upside-down654c8514c1c4a8.3968198916995136207937.06119541443a30c23604.png",
+    "static/media/web logo.png": "/static/media/web logo.0b3ee39bba6f1a5ee547.png",
+    "static/media/certification.png": "/static/media/certification.e4d966edba1a862e756b.png",
+    "static/media/technology.jpg": "/static/media/technology.f4a69bdddc7f6ea7b007.jpg",
+    "static/media/achieve icon.png": "/static/media/achieve icon.89ceeef815133e48579f.png",
+    "index.html": "/index.html",
+    "main.77853830.css.map": "/static/css/main.77853830.css.map",
+    "main.b9f8ef9a.js.map": "/static/js/main.b9f8ef9a.js.map",
+    "787.8aee7f79.chunk.js.map": "/static/js/787.8aee7f79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77853830.css",
+    "static/js/main.b9f8ef9a.js"
+  ]
+}

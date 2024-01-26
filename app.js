@@ -30,6 +30,12 @@ app.use((err, req, res, next) => {
     res.status(500).json({ message: 'Something went wrong!' });
   });
 
+  app.use(express.static(path.join(__dirname,'./build'))); 
+  app.get('/*', function(req, res) { 
+      res.sendFile(path.join(__dirname ,'./build/index.html')); 
+  }); 
+  
+
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {

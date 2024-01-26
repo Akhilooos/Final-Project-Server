@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const model = require('../model/menotrmodel');
+const jwt = require('jsonwebtoken');
 
 router.post('/login', async (req, res) => {
     try {
@@ -8,14 +9,16 @@ router.post('/login', async (req, res) => {
 
         // Check if the email and password match an admin user
         if (email === 'admin@gmail.com' && password === '12345') {
-            res.send({ role: 'admin' });
+            const token = jwt.sign({ role: 'admin' }, 'your-secret-key');
+            res.send({ role: 'admin', token });
         } else {
             // Check if the email matches a mentor user in the database
             const mentor = await model.findOne({ email });
 
             if (mentor) {
+                const token = jwt.sign({ role: 'mentor', mentorId: mentor.mentorId }, 'your-secret-key');
                 // Send the mentor object
-                res.json({ role: 'mentor', mentorId: mentor.mentorId });
+                res.json({ role: 'mentor', mentorId: mentor.mentorId, token });
             } else {
                 res.json({ role: 'invalid' });
             }
@@ -27,4 +30,3 @@ router.post('/login', async (req, res) => {
 });
 
 module.exports = router;
-
